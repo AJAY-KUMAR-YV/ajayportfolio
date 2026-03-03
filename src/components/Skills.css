@@ -1,0 +1,84 @@
+.skills {
+  padding: 8rem 2rem;
+  background: rgba(20, 20, 40, 0.6);
+  backdrop-filter: blur(20px);
+  text-align: center;
+  border-top: 1px solid rgba(102, 126, 234, 0.2);
+  position: relative;
+}
+
+.skills::after {
+  content: '';
+  position: absolute;
+  top: 20%;
+  left: -15%;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(102, 126, 234, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(50px);
+  animation: float 8s ease-in-out infinite;
+}
+
+.skills h2 {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 6s ease infinite;
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+
+.skills ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.8rem;
+  position: relative;
+  z-index: 2;
+}
+
+.skills li {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.25) 0%, rgba(118, 75, 162, 0.2) 100%);
+  backdrop-filter: blur(15px);
+  color: #e0e0e0;
+  padding: 1.2rem 2.2rem;
+  border-radius: 50px;
+  font-weight: 800;
+  font-size: 1.05rem;
+  border: 1.5px solid rgba(102, 126, 234, 0.5);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+}
+
+.skills li::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(240, 147, 251, 0.3), transparent);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.6s ease;
+}
+
+.skills li:hover {
+  background: linear-gradient(135deg, rgba(240, 147, 251, 0.3) 0%, rgba(102, 126, 234, 0.25) 100%);
+  border-color: rgba(240, 147, 251, 0.8);
+  box-shadow: 0 0 30px rgba(240, 147, 251, 0.4), inset 0 0 20px rgba(240, 147, 251, 0.1);
+  transform: translateY(-8px) scale(1.05);
+  color: #ffffff;
+}
+
+.skills li:hover::before {
+  transform: scaleX(1);
+}

@@ -1,0 +1,13 @@
+/* basic styles */
+.App {
+  text-align: center;
+  min-height: 100vh;
+}
+.App h1 {
+  font-size: 2.5rem;
+  color: #333;
+}
+.App p {
+  font-size: 1.2rem;
+  color: #555;
+}

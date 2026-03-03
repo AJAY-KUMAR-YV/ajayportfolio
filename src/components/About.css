@@ -1,0 +1,47 @@
+.about {
+  padding: 8rem 2rem;
+  background: rgba(20, 20, 40, 0.6);
+  backdrop-filter: blur(20px);
+  color: #e0e0e0;
+  text-align: center;
+  border-top: 1px solid rgba(102, 126, 234, 0.2);
+  position: relative;
+}
+
+.about::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  right: -15%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(240, 147, 251, 0.12) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(60px);
+  animation: float 10s ease-in-out infinite;
+}
+
+.about h2 {
+  font-size: 3rem;
+  margin-bottom: 2.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 6s ease infinite;
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+
+.about p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  line-height: 2;
+  color: #b0b9ff;
+  position: relative;
+  z-index: 2;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
