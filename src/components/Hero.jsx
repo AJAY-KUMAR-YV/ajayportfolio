@@ -93,7 +93,7 @@ const Hero = () => (
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.7 }}
         >
-          <a href="/Ajay_Kumar_YV_Resume.pdf" className="btn btn-primary" download>
+          <a href={`${import.meta.env.BASE_URL}Ajay_Kumar_YV_Resume.pdf`} className="btn btn-primary" download>
             Download resume
           </a>
           <a href={`mailto:${profile.email}`} className="btn">

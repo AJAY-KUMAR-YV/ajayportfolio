@@ -27,7 +27,7 @@ const Contact = () => (
         <a href={profile.github} target="_blank" rel="noopener noreferrer">
           GitHub
         </a>
-        <a href="/Ajay_Kumar_YV_Resume.pdf" download>
+        <a href={`${import.meta.env.BASE_URL}Ajay_Kumar_YV_Resume.pdf`} download>
           Resume (PDF)
         </a>
       </div>
