@@ -1,14 +1,29 @@
 import React from 'react'
-import './Navbar.css'
+
+const links = [
+  ['Stack', '#flow'],
+  ['Experience', '#experience'],
+  ['Projects', '#projects'],
+  ['Skills', '#skills']
+]
 
 const Navbar = () => (
-  <nav className="navbar">
-    <a href="#">Home</a>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <header className="nav">
+    <a href="#top" className="nav-logo">
+      <span className="logo-mark">AK</span>
+      <span className="logo-text">ajay.dev</span>
+    </a>
+    <nav className="nav-links">
+      {links.map(([label, href]) => (
+        <a key={href} href={href}>
+          {label}
+        </a>
+      ))}
+    </nav>
+    <a href="#contact" className="btn btn-sm">
+      Hire me
+    </a>
+  </header>
 )
 
 export default Navbar
